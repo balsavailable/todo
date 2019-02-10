@@ -4,13 +4,15 @@
   <div *ngIf="!validation" class="alert alert-warning">
     <p>validation error displayed</p>
   </div>
-  <div>
-    <fieldset>
-    <label>UserName</label>  
-    <input type="text" [(ngModel)]="username" name="username" type="text">
-  </fieldset> 
-   <label>password</label>
-    <input type="password" name="password" [(ngModel)]="password" type="password">
-     <input type="button" (click)="onSubmit()" class="btn btn-success" value="submit">
-  </div>
+  <form>
+    <fieldset class="form-group">
+      <label>UserName</label>
+      <input type="text" class="form-control" [(ngModel)]="username" name="username" type="text">
+    </fieldset>
+    <fieldset class="form-group">
+      <label>password</label>
+      <input type="password" class="form-control" name="password" [(ngModel)]="password" type="password">
+    </fieldset>
+    <input type="button" (click)="onSubmit()" class="btn btn-success" value="submit">
+  </form>
 </div>
